@@ -165,9 +165,6 @@ responses:
   utter_confirm_details:
     - text: "Manufacturer: {manufacturer}, Model: {model}, Kilometers Driven: {kms_driven}, Fuel Type: {fuel_type}, Transmission Type: {transmission_type}, Mileage: {mileage} km/l, Engine: {engine}, Max Power: {max_power} bhp, Seats: {seats}, Year of Manufacture: {year_of_manufacture}. Are all the details correct?"
 
-  utter_predicted_price:
-    - text: "Price has been predicted"
-
   utter_max_contribution:
     - text: "The top feature is ;)"
 
@@ -175,4 +172,4 @@ responses:
 
 actions:
   - action_clear_slots
-
+  - action_predict_car_price

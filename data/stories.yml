@@ -11,7 +11,7 @@ stories:
     - active_loop: null
     - action: utter_confirm_details
     - intent: affirm
-    - action: utter_predicted_price
+    - action: action_predict_car_price
 
 - story: Restart form to edit details
   steps:
@@ -35,7 +35,7 @@ stories:
     - active_loop: null
     - action: utter_confirm_details
     - intent: affirm
-    - action: utter_predicted_price
+    - action: action_predict_car_price
     - intent: ask_shap
     - action: utter_max_contribution
 
