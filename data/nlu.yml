@@ -6,89 +6,141 @@ nlu:
     - hi
     - hello
     - hey there
+    - greetings
+    - howdy
+    - what's up?
+    - good morning
+    - good afternoon
+    - good evening
+    - hi there
+    - hey!
+    - what's going on?
+    - salut
+    - yo
+    - how's it going?
+    - how are you?
 
-- intent: ask_car_details
-  examples: |
-    - I want to provide my car details
-    - Can I give my car's manufacturer?
-    - I want to sell my car
 
 - intent: affirm
   examples: |
     - yes
     - yeah
+    - yep
+    - absolutely
+    - definitely
+    - sure
+    - of course
+    - I agree
+    - that's right
+    - indeed
+    - correct
+    - totally
+    - sounds good
+    - I think so
+    - exactly
+    - for sure
+
   
 - intent: deny
   examples: |
     - no
     - nah
     - nope
+    - not at all
+    - definitely not
+    - absolutely not
+    - I don't think so
+    - I don't want that
+    - not really
+    - no thanks
+    - no way
+    - I’m not interested
+    - that's not what I want
+    - I’d rather not
+    - no, thank you
+    - I’ll pass
+
 
 - intent: ask_shap
   examples: |
     - max contribution
     - most impact
     - top feature
+    - which feature affects the price the most?
+    - what contributes the most to the price?
+    - which car feature has the highest impact?
+    - tell me the most significant factor in pricing
+    - what feature is most important for price prediction?
+    - which attribute affects the price the most?
+    - what influences the price the most?
+    - what are the top contributing features?
+    - show me the features that impact the price
+    - can you tell me which feature has the most weight?
+    - what's the most influential factor in determining the price?
+    - how do the car features affect the price?
+    - which attributes should I focus on for pricing?
+
 
 - intent: inform
   examples: |
     - [toyota](manufacturer) [fortuner](model)
     - [benz](manufacturer) [sclass](model)
+    - [audi](manufacturer) [a4](model)
+    - [honda](manufacturer) [accord](model)
     - [120000](kms_driven) kilometers
     - [20000](kms_driven) kilometers
+    - [30000](kms_driven) km
+    - [50000](kms_driven) km driven
     - [petrol](fuel_type)
     - [diesel](fuel_type)
+    - [electric](fuel_type)
+    - [hybrid](fuel_type)
     - [manual](transmission_type)
     - [automatic](transmission_type)
+    - [semi-automatic](transmission_type)
     - [19.7](mileage) kmpl
     - [17](mileage) kmpl
+    - [15](mileage) kmpl
+    - [20](mileage) km/l
     - [5](seats) seats
     - [7](seats) seats
+    - [4](seats) seats
+    - [2](seats) seats
     - [2000](engine) cc
     - [1200](engine) cc
-    - [100](max_power) bhp 
+    - [1500](engine) cc
+    - [1800](engine) cc
+    - [100](max_power) bhp
     - [150](max_power) bhp
+    - [200](max_power) bhp
+    - [250](max_power) bhp
     - year [2014](year_of_manufacture)
     - year [2018](year_of_manufacture)
+    - year [2020](year_of_manufacture)
+    - year [2021](year_of_manufacture)
+    - my car is a [toyota](manufacturer) [fortuner](model) from [2016](year_of_manufacture)
+    - I own a [honda](manufacturer) [civic](model) with [30000](kms_driven) kilometers on it
+    - it's a [diesel](fuel_type) [audi](manufacturer) [a4](model) with [150](max_power) bhp
+    - my [ford](manufacturer) [mustang](model) is [2020](year_of_manufacture) model
+    - it has [7](seats) seats and [19.7](mileage) kmpl mileage
+    - I have a [toyota](manufacturer) [corolla](model) that runs on [petrol](fuel_type)
+    - I want to sell a [toyota](manufacturer) [fortuner](model)
+    - I'm looking to buy a [benz](manufacturer) [sclass](model)
+    - I have a [honda](manufacturer) [accord](model) for sale
+    - I want to purchase a [ford](manufacturer) [mustang](model)
+    - I'm interested in selling my [audi](manufacturer) [a4](model)
+    - I want to buy a [honda](manufacturer) [civic](model) that has been driven for [30000](kms_driven) kilometers
+    - I would like to sell a [toyota](manufacturer) [corolla](model) with [5](seats) seats
+    - I'm looking for a [diesel](fuel_type) [hyundai](manufacturer) [elantra](model)
+    - I want to sell my [toyota](manufacturer) [fortuner](model) which has [100](max_power) bhp
+    - I'm interested in a [2021](year_of_manufacture) [honda](manufacturer) [accord](model) with [2000](engine) cc
+    - I want to buy a car with [7](seats) seats and [19.7](mileage) kmpl
+    - I'm looking to sell my [audi](manufacturer) [q5](model) which has been driven [20000](kms_driven) kilometers
+    - I want to buy a [mercedes](manufacturer) [gle](model) that runs on [petrol](fuel_type)
+    - I have a [toyota](manufacturer) [camry](model) that I'm selling, it has [1800](engine) cc
+    - I want to buy a [bmw](manufacturer) [x5](model) with [150](max_power) bhp
+    - I would like to sell a [ford](manufacturer) [focus](model) that has [2018](year_of_manufacture) model year
 
-  # - it's a [toyota](manufacturer)
-  # - it's a [benz](manufacturer)
-  # - i have a [toyota](manufacturer)
-  # - i have a [benz](manufacturer)
-  # - get rid of my [toyota](manufacturer)
-  # - it's a [benz](manufacturer) [sclass](model)
-  # - i have a [toyota](manufacturer) [fortuner](model)
-  # - i have a [benz](manufacturer) [sclass](model)
-  # - get rid of my [toyota](manufacturer) [fortuner](model)
-  # - get rid of my [benz](manufacturer) [sclass](model)
-  # - My car has been driven for [50000](kms_driven) kilometers.
-  # - It’s been driven [75000](kms_driven) kilometers.
-  # - I have driven it [100000](kms_driven) kilometers.
-  # - my [toyota](manufacturer) [fortuner](model) has been driven for [50000](kms_driven) kilometers
-  # - i have a [benz](manufacturer) [sclass](model) driven [75000](kms_driven) kilometers
-  # - [toyota](manufacturer) [corolla](model) with [120000](kms_driven) kilometers
-  # - a [ford](manufacturer) [mustang](model) with [45000](kms_driven) kilometers
-  # - my car is a [honda](manufacturer) [accord](model) with [95000](kms_driven) kilometers
-  # - a [hyundai](manufacturer) [elantra](model) driven for [62000](kms_driven) kilometers
-  # - my [toyota](manufacturer) [camry](model) has around [85000](kms_driven) kilometers
-  # - it’s a [petrol](fuel_type) car
-  # - my car runs on [diesel](fuel_type)
-  # - it has a [manual](transmission_type) transmission
-  # - it’s an [automatic](transmission_type) transmission
-  # - mileage is [18](mileage) km/l
-  # - it gives around [15](mileage) km per liter
-  # - the engine capacity is [2000](engine) cc
-  # - it has a [1.5](engine) liter engine
-  # - max power of [100](max_power) bhp
-  # - max power is around [150](max_power) bhp
-  # - it has [5](seats) seats
-  # - my car has [7](seats) seats
-  # - selling price is [500000](selling_price)
-  # - I want to sell it for [350000](selling_price)
-  # - car manufactured in [2015](year_of_manufacture)
-  # - it's from [2018](year_of_manufacture)
-  # - my [hyundai](manufacturer) [elantra](model) with [diesel](fuel_type) engine, driven for [45000](kms_driven) km, and a mileage of [20](mileage) km/l
-  # - a [2019](year_of_manufacture) [toyota](manufacturer) with [manual](transmission_type) transmission and selling price of [750000](selling_price)
 
     
 

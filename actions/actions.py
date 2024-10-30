@@ -34,14 +34,4 @@ class ActionClearSlots(Action):
         # Return cleared slots
         return cleared_slots
 
-class ActionCustomFallback(Action):
-    def name(self) -> str:
-        return "action_custom_fallback"
-
-    async def run(self, dispatcher: CollectingDispatcher, tracker, domain):
-        # Customize your fallback response here
-        dispatcher.utter_message(text="I'm sorry, I didn't quite understand that. Could you rephrase?")
-
-        # You can also revert the user's last input if necessary
-        return [UserUtteranceReverted()]
 

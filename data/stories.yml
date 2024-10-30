@@ -5,7 +5,7 @@ stories:
   steps:
     - intent: greet
     - action: utter_greet
-    - intent: ask_car_details
+    - intent: inform
     - action: car_details_form
     - active_loop: car_details_form
     - active_loop: null
@@ -17,7 +17,7 @@ stories:
   steps:
     - intent: greet
     - action: utter_greet
-    - intent: ask_car_details
+    - intent: inform
     - action: car_details_form
     - active_loop: car_details_form
     - active_loop: null
@@ -29,7 +29,7 @@ stories:
   steps:
     - intent: greet
     - action: utter_greet
-    - intent: ask_car_details
+    - intent: inform
     - action: car_details_form
     - active_loop: car_details_form
     - active_loop: null
