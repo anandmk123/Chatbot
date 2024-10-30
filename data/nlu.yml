@@ -89,8 +89,6 @@ nlu:
     - [honda](manufacturer) [accord](model)
     - [120000](kms_driven) kilometers
     - [20000](kms_driven) kilometers
-    - [30000](kms_driven) km
-    - [50000](kms_driven) km driven
     - [petrol](fuel_type)
     - [diesel](fuel_type)
     - [electric](fuel_type)
