@@ -1,0 +1,41 @@
+version: "3.1"
+
+stories:
+- story: Greet and Collect Car Manufacturer
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_car_details
+    - action: car_details_form
+    - active_loop: car_details_form
+    - active_loop: null
+    - action: utter_confirm_details
+    - intent: affirm
+    - action: utter_predicted_price
+
+- story: Restart form to edit details
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_car_details
+    - action: car_details_form
+    - active_loop: car_details_form
+    - active_loop: null
+    - action: utter_confirm_details
+    - intent: deny
+    - action: action_clear_slots
+
+- story: Greet and Collect Car Manufacturer and shap
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_car_details
+    - action: car_details_form
+    - active_loop: car_details_form
+    - active_loop: null
+    - action: utter_confirm_details
+    - intent: affirm
+    - action: utter_predicted_price
+    - intent: ask_shap
+    - action: utter_max_contribution
+

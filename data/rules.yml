@@ -1,0 +1,34 @@
+version: "3.1"
+
+# rules:
+#   - rule: Clear slots
+#     steps: 
+#       - intent: deny
+#       - action: action_clear_slots
+
+# - rule: Submit car manufacturer form
+#   condition:
+#     - active_loop: car_details_form
+#   steps:
+#     - action: car_details_form
+#     - active_loop: null
+#     - slot_was_set:
+#       - requested_slot: null
+#     - action: utter_confirm_details
+
+# - rule: Restart car details form
+#   condition:
+#     - active_loop: car_details_form
+#   steps:
+#     - intent: ask_car_details
+#     - action: action_clear_slots
+#     - action: car_details_form
+#     - active_loop: car_details_form
+
+# - rule: Interruption in car Form
+#   condition:
+#   - active_loop: car_details_form
+#   steps:
+#   - intent: greet
+#   - action: car_details_form
+#   - active_loop: car_details_form

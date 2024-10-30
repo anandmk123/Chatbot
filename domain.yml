@@ -1,0 +1,178 @@
+version: "3.1"
+
+intents:
+  - greet
+  - ask_car_details
+  - inform
+  - affirm
+  - deny
+  - ask_shap
+  - nlu_fallback
+
+entities:
+  - manufacturer
+  - model
+  - kms_driven
+  - fuel_type
+  - transmission_type
+  - mileage
+  - engine
+  - max_power
+  - seats
+  - year_of_manufacture
+
+slots:
+  manufacturer:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: manufacturer
+        conditions: 
+          - active_loop: car_details_form
+
+  model:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: model
+        conditions: 
+          - active_loop: car_details_form
+
+  kms_driven:
+    type: float
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: kms_driven
+        conditions: 
+          - active_loop: car_details_form
+
+  fuel_type:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: fuel_type
+        conditions: 
+          - active_loop: car_details_form
+
+  transmission_type:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: transmission_type
+        conditions: 
+          - active_loop: car_details_form
+
+  mileage:
+    type: float
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: mileage
+        conditions: 
+          - active_loop: car_details_form
+
+  engine:
+    type: float
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: engine
+        conditions: 
+          - active_loop: car_details_form
+
+  max_power:
+    type: float
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: max_power
+        conditions: 
+          - active_loop: car_details_form
+
+  seats:
+    type: float
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: seats
+        conditions: 
+          - active_loop: car_details_form
+
+  year_of_manufacture:
+    type: float
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: year_of_manufacture
+        conditions: 
+          - active_loop: car_details_form
+
+
+forms:
+  car_details_form:
+    required_slots:
+    - manufacturer
+    - model
+    - kms_driven
+    - fuel_type
+    - transmission_type
+    - mileage
+    - engine
+    - max_power
+    - seats
+    - year_of_manufacture
+
+
+responses:
+  utter_greet:
+    - text: "Hi, how can I assist you today?"
+
+  utter_ask_manufacturer:
+    - text: "What is the manufacturer of your car?"
+
+  utter_ask_model:
+    - text: "What is the model of your car?"
+
+  utter_ask_kms_driven:
+    - text: "How many kilometers has your car been driven?"
+
+  utter_ask_fuel_type:
+    - text: "What is the fuel type of your car? (e.g., petrol, diesel, electric)"
+
+  utter_ask_transmission_type:
+    - text: "What type of transmission does your car have? (e.g., automatic, manual)"
+
+  utter_ask_mileage:
+    - text: "What is the mileage of your car (in km/l)?"
+
+  utter_ask_engine:
+    - text: "What is the engine capacity of your car? (e.g., 1500cc)"
+
+  utter_ask_max_power:
+    - text: "What is the maximum power output of your car? (e.g., 100 bhp)"
+
+  utter_ask_seats:
+    - text: "How many seats does your car have?"
+
+  utter_ask_year_of_manufacture:
+    - text: "What is the year of manufacture of your car?"
+
+  utter_confirm_details:
+    - text: "Manufacturer: {manufacturer}, Model: {model}, Kilometers Driven: {kms_driven}, Fuel Type: {fuel_type}, Transmission Type: {transmission_type}, Mileage: {mileage} km/l, Engine: {engine}, Max Power: {max_power} bhp, Seats: {seats}, Year of Manufacture: {year_of_manufacture}. Are all the details correct?"
+
+  utter_predicted_price:
+    - text: "Price has been predicted"
+
+  utter_max_contribution:
+    - text: "The top feature is ;)"
+
+
+
+actions:
+  - action_clear_slots
+

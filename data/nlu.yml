@@ -1,0 +1,95 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hi
+    - hello
+    - hey there
+
+- intent: ask_car_details
+  examples: |
+    - I want to provide my car details
+    - Can I give my car's manufacturer?
+    - I want to sell my car
+
+- intent: affirm
+  examples: |
+    - yes
+    - yeah
+  
+- intent: deny
+  examples: |
+    - no
+    - nah
+    - nope
+
+- intent: ask_shap
+  examples: |
+    - max contribution
+    - most impact
+    - top feature
+
+- intent: inform
+  examples: |
+    - [toyota](manufacturer) [fortuner](model)
+    - [benz](manufacturer) [sclass](model)
+    - [120000](kms_driven) kilometers
+    - [20000](kms_driven) kilometers
+    - [petrol](fuel_type)
+    - [diesel](fuel_type)
+    - [manual](transmission_type)
+    - [automatic](transmission_type)
+    - [19.7](mileage) kmpl
+    - [17](mileage) kmpl
+    - [5](seats) seats
+    - [7](seats) seats
+    - [2000](engine) cc
+    - [1200](engine) cc
+    - [100](max_power) bhp 
+    - [150](max_power) bhp
+    - year [2014](year_of_manufacture)
+    - year [2018](year_of_manufacture)
+
+  # - it's a [toyota](manufacturer)
+  # - it's a [benz](manufacturer)
+  # - i have a [toyota](manufacturer)
+  # - i have a [benz](manufacturer)
+  # - get rid of my [toyota](manufacturer)
+  # - it's a [benz](manufacturer) [sclass](model)
+  # - i have a [toyota](manufacturer) [fortuner](model)
+  # - i have a [benz](manufacturer) [sclass](model)
+  # - get rid of my [toyota](manufacturer) [fortuner](model)
+  # - get rid of my [benz](manufacturer) [sclass](model)
+  # - My car has been driven for [50000](kms_driven) kilometers.
+  # - It’s been driven [75000](kms_driven) kilometers.
+  # - I have driven it [100000](kms_driven) kilometers.
+  # - my [toyota](manufacturer) [fortuner](model) has been driven for [50000](kms_driven) kilometers
+  # - i have a [benz](manufacturer) [sclass](model) driven [75000](kms_driven) kilometers
+  # - [toyota](manufacturer) [corolla](model) with [120000](kms_driven) kilometers
+  # - a [ford](manufacturer) [mustang](model) with [45000](kms_driven) kilometers
+  # - my car is a [honda](manufacturer) [accord](model) with [95000](kms_driven) kilometers
+  # - a [hyundai](manufacturer) [elantra](model) driven for [62000](kms_driven) kilometers
+  # - my [toyota](manufacturer) [camry](model) has around [85000](kms_driven) kilometers
+  # - it’s a [petrol](fuel_type) car
+  # - my car runs on [diesel](fuel_type)
+  # - it has a [manual](transmission_type) transmission
+  # - it’s an [automatic](transmission_type) transmission
+  # - mileage is [18](mileage) km/l
+  # - it gives around [15](mileage) km per liter
+  # - the engine capacity is [2000](engine) cc
+  # - it has a [1.5](engine) liter engine
+  # - max power of [100](max_power) bhp
+  # - max power is around [150](max_power) bhp
+  # - it has [5](seats) seats
+  # - my car has [7](seats) seats
+  # - selling price is [500000](selling_price)
+  # - I want to sell it for [350000](selling_price)
+  # - car manufactured in [2015](year_of_manufacture)
+  # - it's from [2018](year_of_manufacture)
+  # - my [hyundai](manufacturer) [elantra](model) with [diesel](fuel_type) engine, driven for [45000](kms_driven) km, and a mileage of [20](mileage) km/l
+  # - a [2019](year_of_manufacture) [toyota](manufacturer) with [manual](transmission_type) transmission and selling price of [750000](selling_price)
+
+    
+
+
